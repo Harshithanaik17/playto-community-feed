@@ -19,7 +19,8 @@ Rules used:
 
 Karma is calculated dynamically from the Like table using a time-based filter.
 
-Query used:::::::
+Query used:
+
 Like.objects
 .filter(created_at__gte=since)
 .values("user__username")
@@ -33,3 +34,4 @@ Like.objects
     )
 )
 .order_by("-karma")[:5]
+
